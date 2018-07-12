@@ -1,0 +1,27 @@
+  @font-face {
+      font-family: 'FFKievitWebProItalic';
+      src: url('https://www.surfair.com/app/themes/surfair/assets/fonts/FFKievitWebProItalic.woff2') format('woff2');
+      font-weight: normal;
+      font-style: italic;
+  }
+
+  @font-face {
+      font-family: 'FFKievitWebProLight';
+      src: url('https://www.surfair.com/app/themes/surfair/assets/fonts/FFKievitWebProLight.woff2') format('woff2');
+      font-weight: light;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'FFKievitWebProBold';
+      src: url('https://www.surfair.com/app/themes/surfair/assets/fonts/FFKievitWebProBold.woff2') format('woff2');
+      font-weight: bold;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'FFKievitWebPro';
+      src: url('https://www.surfair.com/app/themes/surfair/assets/fonts/FFKievitWebPro.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+  }
