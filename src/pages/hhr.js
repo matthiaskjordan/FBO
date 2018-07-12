@@ -16,22 +16,24 @@ const Index = ({ data }) => {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.25fr 1fr 1fr;
     grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Hero Hero' 'Buttons Buttons TextMeTheApp TextMeTheApp' 'Footer Footer Footer Footer';
+    font-family: 'FFKievitWebProLight';
+    text-align: center;
     h1 {
       font-size: ${props => (props.small ? '1.5rem' : '3rem')};
-      padding: .25rem 0;
-      font-family: "FFKievitWebPro";
+      padding: 0.25rem 0;
+      font-family: 'FFKievitWebPro';
     }
     h2 {
       font-size: 1.25rem;
-      padding: .25rem 0;
+      padding: 0.25rem 0;
       text-transform: uppercase;
-      font-family: "FFKievitWebProBold";
+      font-family: 'FFKievitWebProBold';
     }
     p {
       font-size: 1.5rem;
-      padding: .25rem 0;
+      padding: 0.25rem 0;
       font-weight: thing;
-      font-family: "FFKievitWebProLight";
+      font-family: 'FFKievitWebProLight';
     }
   `
   const Banner = styled.div`
@@ -69,7 +71,6 @@ const Index = ({ data }) => {
   `
   const TextMeTheApp = styled.div`
     grid-area: TextMeTheApp;
-    text-align: center;
     background: ${props => props.theme.colors.secondary};
     display: flex;
     flex-direction: column;
@@ -78,9 +79,7 @@ const Index = ({ data }) => {
     height: 100%;
     width: 100%;
     div > form {
-      text-align: center;
       input {
-        text-align: center;
         padding: 1rem;
         margin: 0.5rem;
         background: ${props => props.theme.colors.white} !important;
@@ -103,15 +102,12 @@ const Index = ({ data }) => {
   const PageTitle = styled.h1`
     font-size: inherit;
     font-weight: inherit;
-    text-align: center;
   `
 
   const TextMeTheAppTitle = styled.h2`
-  font-size: inherit;
-  font-weight: inherit;
-  text-align: center;
+    font-size: inherit;
+    font-weight: inherit;
   `
-
   return (
     <div>
       <SEO />

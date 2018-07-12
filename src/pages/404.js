@@ -32,6 +32,7 @@ const NotFoundPage = () => (
     <Box>
       <Title>Error 404</Title>
       <Text>Sorry, that page can't be found</Text>
+      <Text><a href="/">Go Home</a></Text>
     </Box>
   </div>
 )
