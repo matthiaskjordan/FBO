@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import SEO from '../components/SEO'
 import Modules from '../components/Modules'
+import Footer from '../components/Footer'
 
 const Index = ({ data }) => {
   const pages = data.allContentfulPage.edges
@@ -13,17 +14,47 @@ const Index = ({ data }) => {
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 'Hero Hero Hero Hero' 'Buttons Buttons TextMeTheApp TextMeTheApp' 'Footer Footer Footer Footer';
+    grid-template-rows: 0.25fr 1fr 1fr;
+    grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Hero Hero' 'Buttons Buttons TextMeTheApp TextMeTheApp' 'Footer Footer Footer Footer';
+    h1 {
+      font-size: ${props => (props.small ? '1.5rem' : '3rem')};
+      padding: .25rem 0;
+      font-family: "FFKievitWebPro";
+    }
+    h2 {
+      font-size: 1.25rem;
+      padding: .25rem 0;
+      text-transform: uppercase;
+      font-family: "FFKievitWebProBold";
+    }
+    p {
+      font-size: 1.5rem;
+      padding: .25rem 0;
+      font-weight: thing;
+      font-family: "FFKievitWebProLight";
+    }
+  `
+  const Banner = styled.div`
+    grid-area: Banner;
+    margin-top: 70px;
+    padding: 2rem;
+    background: ${props => props.theme.colors.blue};
+    color: ${props => props.theme.colors.white};
   `
   const Hero = styled.div`
     grid-area: Hero;
     height: 400px;
-    margin-top: 75px;
     position: relative;
     overflow: hidden;
     .gatsby-image-outer-wrapper,
     .gatsby-image-wrapper {
       position: static !important;
+      img {
+        object-position: top !important;
+      }
+    }
+    @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+      height: 90vh;
     }
   `
   const Cover = styled.div`
@@ -33,12 +64,13 @@ const Index = ({ data }) => {
   `
   const Buttons = styled.div`
     grid-area: Buttons;
-    margin: 1rem;
+    padding: 1rem;
+    background: ${props => props.theme.colors.tertiary};
   `
   const TextMeTheApp = styled.div`
     grid-area: TextMeTheApp;
     text-align: center;
-    background: #dedede;
+    background: ${props => props.theme.colors.secondary};
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -48,106 +80,113 @@ const Index = ({ data }) => {
     div > form {
       text-align: center;
       input {
+        text-align: center;
         padding: 1rem;
-        margin: .5rem;
-        background: #ffffff;
+        margin: 0.5rem;
+        background: ${props => props.theme.colors.white} !important;
         width: 330px;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          text-align: center;
+        }
       }
-      input[type=submit] {
-        color: #fff;
-        background: #0A253E;
+      input[type='submit'] {
+        color: ${props => props.theme.colors.white};
+        background: ${props => props.theme.colors.blue} !important;
+        outline: none;
         font-size: 1rem;
       }
     }
   `
   const PageTitle = styled.h1`
-    font-size: ${props => (props.small ? '2em' : '3em')};
-    text-transform: capitalize;
-    font-weight: 600;
+    font-size: inherit;
+    font-weight: inherit;
     text-align: center;
-    margin: 0;
-    line-height: 1.2;
   `
 
-  const TextMeTheAppTitle = styled.h3`
-    font-size: ${props => (props.small ? '.5em' : '1em')};
-    text-transform: capitalize;
-    font-weight: 600;
-    text-align: center;
-    margin: 0 0 .5rem;
-    line-height: 1.2;
+  const TextMeTheAppTitle = styled.h2`
+  font-size: inherit;
+  font-weight: inherit;
+  text-align: center;
   `
 
   return (
     <div>
       <SEO />
-      <GridContainer>
-        <Hero>
-          <Cover>
-          {pages.map(({ node: page }) => (
-            <Img key={page.id} sizes={page.hero.sizes} />
-            ))}
-          </Cover>
-        </Hero>
-        <Buttons>
-        {pages.map(({ node: page }) => (
-
-            <Modules key={page.id} content={page.content} />
-
-        ))}
-        </Buttons>
-        <TextMeTheApp>
-          Send SMS
-          <div
+      {pages.map(({ node: page }) => (
+        <GridContainer key={page.id}>
+          <Banner
             dangerouslySetInnerHTML={{
-              __html: `        <form onsubmit="sendSMS(this); return false;">
-              <input id="phone" name="phone" type="tel" placeholder="(650) 123-4567" />
-              <br/>
-              <input type="submit"/>
-          </form>`,
+              __html: page.promotion.childMarkdownRemark.html,
             }}
           />
-        </TextMeTheApp>
-      </GridContainer>
+          <Hero>
+            <Cover>
+              <Img sizes={page.hero.sizes} />
+            </Cover>
+          </Hero>
+          <Buttons>
+            <Modules content={page.content} />
+          </Buttons>
+          <TextMeTheApp>
+            <TextMeTheAppTitle>TEXT ME THE APP</TextMeTheAppTitle>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `        <form onsubmit="sendSMS(this); return false; ">
+              <input id="phone" name="phone" type="tel" placeholder="(123) 456-7890" />
+              <br/>
+              <input type="submit" value="SUBMIT"/>
+          </form>`,
+              }}
+            />
+          </TextMeTheApp>
+        </GridContainer>
+      ))}
     </div>
   )
 }
 
 export const query = graphql`
-query sba {
-allContentfulPage(
-  filter: {slug: {eq: "sba"}}
-){
-  edges {
-    node {
-      id
-      title
-      slug
-      hero {
-        title
-        sizes(maxWidth: 1800) {
-          ...GatsbyContentfulSizes_withWebp
-        }
-      }
-      content {
-        __typename
-        ... on ContentfulPost {
-          title
+  query sba {
+    allContentfulPage(filter: { slug: { eq: "sba" } }) {
+      edges {
+        node {
           id
+          title
           slug
-          url
-          heroImage {
+          promotion {
+            childMarkdownRemark {
+              html
+            }
+          }
+          hero {
             title
             sizes(maxWidth: 1800) {
-              ...GatsbyContentfulSizes_withWebp_noBase64
+              ...GatsbyContentfulSizes_withWebp
+            }
+          }
+          content {
+            __typename
+            ... on ContentfulPost {
+              title
+              id
+              slug
+              text
+              url
+              heroImage {
+                title
+                sizes(maxWidth: 1800) {
+                  ...GatsbyContentfulSizes_withWebp_noBase64
+                }
+              }
             }
           }
         }
       }
     }
   }
-  }
-  }
-  `
+`
 
-  export default Index
+export default Index
