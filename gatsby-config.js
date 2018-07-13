@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 const config = require('./src/utils/siteConfig')
 let contentfulConfig
 
@@ -43,9 +47,6 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-          },
           {
             resolve: `gatsby-remark-images-contentful`,
             options: {
