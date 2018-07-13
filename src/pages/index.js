@@ -39,7 +39,7 @@ const Index = ({ data }) => {
       grid-template-rows: 0.25fr 1fr 1fr;
     }
     @media screen and (max-width: ${props => props.theme.responsive.medium}) {
-      grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Hero Hero' 'Buttons Buttons Buttons Buttons' 'TextMeTheApp TextMeTheApp TextMeTheApp TextMeTheApp' 'Footer Footer Footer Footer';
+      grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Hero Hero' 'TextMeTheApp TextMeTheApp TextMeTheApp TextMeTheApp' 'Buttons Buttons Buttons Buttons' 'Footer Footer Footer Footer';
     }
   `
   const Banner = styled.div`
