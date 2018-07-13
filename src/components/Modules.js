@@ -9,14 +9,20 @@ const List = styled.ul`
   grid-template-rows: 1fr;
   grid-gap: 1rem;
   height: 100%;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    grid-template-columns: 1fr 1fr;;
+  }
+  @media screen and (max-width: ${props => props.theme.responsive.medium}) {
+    grid-template-columns: 1fr;
+  }
 `
 const Card = styled.li`
-  width: 100%;
   transition: background 0.2s;
   align-self: center;
   justify-self: center
+  width: 100%;
+  padding: 1rem 0;
   a {
-    width: 100%;
     color: ${props => props.theme.colors.base};
     text-decoration: none;
     .gatsby-image-wrapper {
@@ -27,6 +33,10 @@ const Card = styled.li`
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     width: 50%;
   }
+  @media screen and (max-width: ${props => props.theme.responsive.medium}) {
+    width: 50%;
+  }
+
 `
 const Title = styled.h2`
   font-size: ${props => (props.small ? '.5em' : '1em')};

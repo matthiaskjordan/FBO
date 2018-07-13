@@ -14,8 +14,7 @@ const Index = ({ data }) => {
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.25fr 1fr 1fr;
-    grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Hero Hero' 'Buttons Buttons TextMeTheApp TextMeTheApp' 'Footer Footer Footer Footer';
+    grid-template-rows: 0.25fr 1fr 1fr 1fr;
     font-family: 'FFKievitWebProLight';
     text-align: center;
     h1 {
@@ -37,6 +36,10 @@ const Index = ({ data }) => {
     }
     @media screen and (min-width: ${props => props.theme.responsive.medium}) {
       grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Buttons Buttons' 'Hero Hero TextMeTheApp TextMeTheApp' 'Footer Footer Footer Footer';
+      grid-template-rows: 0.25fr 1fr 1fr;
+    }
+    @media screen and (max-width: ${props => props.theme.responsive.medium}) {
+      grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Hero Hero' 'Buttons Buttons Buttons Buttons' 'TextMeTheApp TextMeTheApp TextMeTheApp TextMeTheApp' 'Footer Footer Footer Footer';
     }
   `
   const Banner = styled.div`
@@ -48,9 +51,9 @@ const Index = ({ data }) => {
   `
   const Hero = styled.div`
     grid-area: Hero;
-    height: 400px;
     position: relative;
     overflow: hidden;
+    height: 100%;
     .gatsby-image-outer-wrapper,
     .gatsby-image-wrapper {
       position: static !important;
@@ -58,9 +61,8 @@ const Index = ({ data }) => {
         object-position: top !important;
       }
     }
-    @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-      height: 70vh;
-    }
+
+
   `
   const Cover = styled.div`
     width: 100%;
