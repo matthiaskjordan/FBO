@@ -35,6 +35,9 @@ const Index = ({ data }) => {
       font-weight: thing;
       font-family: 'FFKievitWebProLight';
     }
+    @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+      grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Buttons Buttons' 'Hero Hero TextMeTheApp TextMeTheApp' 'Footer Footer Footer Footer';
+    }
   `
   const Banner = styled.div`
     grid-area: Banner;
@@ -56,7 +59,7 @@ const Index = ({ data }) => {
       }
     }
     @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-      height: 90vh;
+      height: 70vh;
     }
   `
   const Cover = styled.div`

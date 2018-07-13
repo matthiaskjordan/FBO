@@ -15,7 +15,6 @@ const Card = styled.li`
   transition: background 0.2s;
   align-self: center;
   justify-self: center
-
   a {
     width: 100%;
     color: ${props => props.theme.colors.base};
@@ -24,6 +23,9 @@ const Card = styled.li`
       height: 0;
       padding-bottom: 100%;
     }
+  }
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    width: 50%;
   }
 `
 const Title = styled.h2`
