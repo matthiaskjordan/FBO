@@ -9,18 +9,20 @@ const List = styled.ul`
   grid-template-rows: 1fr;
   grid-gap: 1rem;
   height: 100%;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    grid-template-columns: 1fr 1fr;;
-  }
-  @media screen and (max-width: ${props => props.theme.responsive.medium}) {
+  @media screen and (max-width: 699px) {
     grid-template-columns: 1fr;
+  }
+  @media screen and (min-width: 700px) and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (min-width: 1025px) {
+    grid-template-columns: 1fr 1fr;
   }
 `
 const Card = styled.li`
   transition: background 0.2s;
   align-self: center;
   justify-self: center
-  width: 100%;
   padding: 1rem 0;
   a {
     color: ${props => props.theme.colors.base};
@@ -30,10 +32,13 @@ const Card = styled.li`
       padding-bottom: 100%;
     }
   }
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    width: 50%;
+  @media screen and (max-width: 699px) {
+    width: 70%;
   }
-  @media screen and (max-width: ${props => props.theme.responsive.medium}) {
+  @media screen and (min-width: 700px) and (max-width: 1024px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 1025px) {
     width: 50%;
   }
 

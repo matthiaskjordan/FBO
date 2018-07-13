@@ -34,12 +34,17 @@ const Index = ({ data }) => {
       font-weight: thing;
       font-family: 'FFKievitWebProLight';
     }
-    @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-      grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Buttons Buttons' 'Hero Hero TextMeTheApp TextMeTheApp' 'Footer Footer Footer Footer';
+    @media screen and (max-width: 699px) {
+      grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Hero Hero' 'TextMeTheApp TextMeTheApp TextMeTheApp TextMeTheApp' 'Buttons Buttons Buttons Buttons' 'Footer Footer Footer Footer';
       grid-template-rows: 0.25fr 1fr 1fr;
     }
-    @media screen and (max-width: ${props => props.theme.responsive.medium}) {
-      grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Hero Hero' 'TextMeTheApp TextMeTheApp TextMeTheApp TextMeTheApp' 'Buttons Buttons Buttons Buttons' 'Footer Footer Footer Footer';
+    @media screen and (min-width: 700px) and (max-width: 1024px) {
+      grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Hero Hero' 'Buttons Buttons TextMeTheApp TextMeTheApp' 'Footer Footer Footer Footer';
+      grid-template-rows: 0.25fr 1fr 1fr;
+    }
+    @media screen and (min-width: 1025px) {
+      grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Buttons Buttons' 'Hero Hero TextMeTheApp TextMeTheApp' 'Footer Footer Footer Footer';
+      grid-template-rows: 0.25fr 1fr 1fr;
     }
   `
   const Banner = styled.div`
@@ -53,13 +58,21 @@ const Index = ({ data }) => {
     grid-area: Hero;
     position: relative;
     overflow: hidden;
-    height: 100%;
     .gatsby-image-outer-wrapper,
     .gatsby-image-wrapper {
       position: static !important;
       img {
         object-position: top !important;
       }
+    }
+    @media screen and (max-width: 699px) {
+      height: 100%;
+    }
+    @media screen and (min-width: 700px) and (max-width: 1024px) {
+      height: 40vh;
+    }
+    @media screen and (min-width: 1025px) {
+      height: 70vh;
     }
 
 
@@ -88,7 +101,10 @@ const Index = ({ data }) => {
         padding: 1rem;
         margin: 0.5rem;
         background: ${props => props.theme.colors.white} !important;
-        width: 330px;
+        width: 100%;
+        max-width: 330px;
+        text-align: center;
+        font-size: 1.25rem;
         &:focus {
           outline: none;
         }
@@ -100,7 +116,9 @@ const Index = ({ data }) => {
         color: ${props => props.theme.colors.white};
         background: ${props => props.theme.colors.blue} !important;
         outline: none;
-        font-size: 1rem;
+        font-size: 1.25rem;
+        font-family: 'FFKievitWebProBold';
+        appearance: none;
       }
     }
   `
