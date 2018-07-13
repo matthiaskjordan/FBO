@@ -6,7 +6,6 @@ const theme = {
     tertiary: '#efefef', // Light Gray
     highlight: '#5b8bf7', // Light Blue
     blue: '#0A253E', // Midnight Blue
-
   },
   sizes: {
     maxWidth: '1200px',

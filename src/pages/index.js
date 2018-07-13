@@ -1,44 +1,41 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import SEO from '../components/SEO'
 import Modules from '../components/Modules'
-import Footer from '../components/Footer'
 
 const Index = ({ data }) => {
   const pages = data.allContentfulPage.edges
-  const posts = data.contentfulPost
 
   const GridContainer = styled.section`
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.25fr 1fr 1fr 1fr;
-    font-family: 'FFKievitWebProLight';
+    font-family: 'FFKievitWebProLight', Helvetica, Verdana, sans-serif;
     text-align: center;
     h1 {
       font-size: ${props => (props.small ? '1.5rem' : '3rem')};
       padding: 0.25rem 0;
-      font-family: 'FFKievitWebPro';
+      font-family: 'FFKievitWebPro', Helvetica, Verdana, sans-serif;
     }
     h2 {
       font-size: 1.25rem;
       padding: 0.25rem 0;
       text-transform: uppercase;
-      font-family: 'FFKievitWebProBold';
+      font-family: 'FFKievitWebProBold', Helvetica, Verdana, sans-serif;
     }
     p {
       font-size: 1.5rem;
       padding: 0.25rem 0;
       font-weight: thing;
-      font-family: 'FFKievitWebProLight';
+      font-family: 'FFKievitWebProLight', Helvetica, Verdana, sans-serif;
     }
-    @media screen and (max-width: 699px) {
+    @media screen and (max-width: 599px) {
       grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Hero Hero' 'TextMeTheApp TextMeTheApp TextMeTheApp TextMeTheApp' 'Buttons Buttons Buttons Buttons' 'Footer Footer Footer Footer';
       grid-template-rows: 0.25fr 1fr 1fr;
     }
-    @media screen and (min-width: 700px) and (max-width: 1024px) {
+    @media screen and (min-width: 600px) and (max-width: 1024px) {
       grid-template-areas: 'Banner Banner Banner Banner' 'Hero Hero Hero Hero' 'Buttons Buttons TextMeTheApp TextMeTheApp' 'Footer Footer Footer Footer';
       grid-template-rows: 0.25fr 1fr 1fr;
     }
@@ -65,17 +62,17 @@ const Index = ({ data }) => {
         object-position: top !important;
       }
     }
-    @media screen and (max-width: 699px) {
+    @media screen and (max-width: 599px) {
       height: 100%;
     }
-    @media screen and (min-width: 700px) and (max-width: 1024px) {
-      height: 40vh;
+    @media screen and (min-width: 600px) and (max-width: 1024px) {
+      height: 100%;
+      min-height: 40vh;
+      max-height: 40vh;
     }
     @media screen and (min-width: 1025px) {
       height: 70vh;
     }
-
-
   `
   const Cover = styled.div`
     width: 100%;
@@ -101,7 +98,7 @@ const Index = ({ data }) => {
         padding: 1rem;
         margin: 0.5rem;
         background: ${props => props.theme.colors.white} !important;
-        width: 100%;
+        width: 90%;
         max-width: 330px;
         text-align: center;
         font-size: 1.25rem;
@@ -117,16 +114,11 @@ const Index = ({ data }) => {
         background: ${props => props.theme.colors.blue} !important;
         outline: none;
         font-size: 1.25rem;
-        font-family: 'FFKievitWebProBold';
+        font-family: 'FFKievitWebProBold', Helvetica, Verdana, sans-serif;
         appearance: none;
       }
     }
   `
-  const PageTitle = styled.h1`
-    font-size: inherit;
-    font-weight: inherit;
-  `
-
   const TextMeTheAppTitle = styled.h2`
     font-size: inherit;
     font-weight: inherit;

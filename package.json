@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-gcn",
-  "description": "A starter template to build amazing static websites with Gatsby, Contentful and Netlify",
-  "version": "1.2.2",
-  "repository": "https://github.com/ryanwiemer/gatsby-starter-gcn",
-  "author": "Ryan Wiemer <ryan@ryanwiemer.com>",
+  "name": "sa-fbo",
+  "description": "Microsite for in-FBO iPad kiosk",
+  "version": "1.0.0",
+  "repository": "https://github.com/matthiaskjordan/fbo",
+  "author": "Matthias Jordan <matthias@surfair.com>",
   "dependencies": {
     "chalk": "^2.4.1",
     "contentful-import": "^7.0.2",

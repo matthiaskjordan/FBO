@@ -6,7 +6,7 @@ module.exports = {
     'In-FBO Surf Air Kiosk to provide information and collect feedback.',
   siteUrl: 'https://sa-fbo.netlify.com', // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/
   author: 'Matthias Jordan', // Author for RSS author segment and SEO schema
-  authorUrl: 'https://github.com/matthiaskjordan/FBO', // URL used for author and publisher schema, can be a social profile or other personal site
+  authorUrl: 'https://surfair.com', // URL used for author and publisher schema, can be a social profile or other personal site
   userTwitter: '@surfair', // Change for Twitter Cards
   shortTitle: 'Surf Air - FBO', // Used for App manifest e.g. Mobile Home Screen
   shareImage: '/logos/share.jpg', // Open Graph Default Share Image. 1200x1200 is recommended

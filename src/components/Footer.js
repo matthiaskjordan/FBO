@@ -63,8 +63,7 @@ const Footer = () => (
           rel="noopener noreferrer"
         >
           Surf Air
-        </a>&nbsp;&nbsp;
-        ||&nbsp;&nbsp;
+        </a>&nbsp;&nbsp; ||&nbsp;&nbsp;
         <a
           href="https://github.com/matthiaskjordan/FBO"
           target="_blank"

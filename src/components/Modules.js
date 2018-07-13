@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
 const List = styled.ul`
@@ -9,10 +8,10 @@ const List = styled.ul`
   grid-template-rows: 1fr;
   grid-gap: 1rem;
   height: 100%;
-  @media screen and (max-width: 699px) {
+  @media screen and (max-width: 599px) {
     grid-template-columns: 1fr;
   }
-  @media screen and (min-width: 700px) and (max-width: 1024px) {
+  @media screen and (min-width: 600px) and (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
   }
   @media screen and (min-width: 1025px) {
@@ -22,7 +21,7 @@ const List = styled.ul`
 const Card = styled.li`
   transition: background 0.2s;
   align-self: center;
-  justify-self: center
+  justify-self: center;
   padding: 1rem 0;
   a {
     color: ${props => props.theme.colors.base};
@@ -32,16 +31,15 @@ const Card = styled.li`
       padding-bottom: 100%;
     }
   }
-  @media screen and (max-width: 699px) {
+  @media screen and (max-width: 599px) {
     width: 70%;
   }
-  @media screen and (min-width: 700px) and (max-width: 1024px) {
+  @media screen and (min-width: 600px) and (max-width: 1024px) {
     width: 100%;
   }
   @media screen and (min-width: 1025px) {
     width: 50%;
   }
-
 `
 const Title = styled.h2`
   font-size: ${props => (props.small ? '.5em' : '1em')};
@@ -51,20 +49,19 @@ const Title = styled.h2`
   text-align: center;
 `
 
-
 const Modules = props => {
   return (
     <List>
       {props.content.map((content, index) => (
         <Card key={index}>
-        {content.__typename == 'ContentfulPost' && (
-          <a href={content.url}>
-          <Img sizes={content.heroImage.sizes} />
-          <Title>{content.text}</Title>
-          </a>
-        )}
+          {content.__typename === 'ContentfulPost' && (
+            <a href={content.url}>
+              <Img sizes={content.heroImage.sizes} />
+              <Title>{content.text}</Title>
+            </a>
+          )}
         </Card>
-         ))}
+      ))}
     </List>
   )
 }

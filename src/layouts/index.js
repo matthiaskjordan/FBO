@@ -27,7 +27,7 @@ const Template = ({ children }) => {
 
       <ThemeProvider theme={theme}>
         <div className="siteContent">
-              <Menu/>
+          <Menu />
           {children()}
         </div>
       </ThemeProvider>
