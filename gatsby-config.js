@@ -80,10 +80,9 @@ module.exports = {
         short_name: config.shortTitle,
         description: config.siteDescription,
         start_url: '/',
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
-        display: 'minimal-ui',
-        icon: `static${config.siteLogo}`,
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
+        display: 'fullscreen'
       },
     },
     'gatsby-plugin-offline',
