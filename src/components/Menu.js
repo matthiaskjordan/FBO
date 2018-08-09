@@ -111,28 +111,28 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <Link to="HHR" activeStyle={activeLinkStyle}>
-              HHR
+            <Link to="hhr" activeStyle={activeLinkStyle}>
+              Hawthorne
             </Link>
           </li>
           <li>
-            <Link to="BUR" activeStyle={activeLinkStyle}>
-              BUR
+            <Link to="bur" activeStyle={activeLinkStyle}>
+              Burbank
             </Link>
           </li>
           <li>
-            <Link to="SBA" activeStyle={activeLinkStyle}>
-              SBA
+            <Link to="sba" activeStyle={activeLinkStyle}>
+              Santa Barbara
             </Link>
           </li>
           <li>
-            <Link to="SQL" activeStyle={activeLinkStyle}>
-              SQL
+            <Link to="sql" activeStyle={activeLinkStyle}>
+              San Carlos
             </Link>
           </li>
           <li>
-            <Link to="Austin" activeStyle={activeLinkStyle}>
-              Austin
+            <Link to="trk" activeStyle={activeLinkStyle}>
+              Truckee / Lake Tahoe
             </Link>
           </li>
           <li>
@@ -143,6 +143,11 @@ const Menu = () => {
           <li>
             <Link to="Dallas" activeStyle={activeLinkStyle}>
               Dallas
+            </Link>
+          </li>
+          <li>
+            <Link to="Austin" activeStyle={activeLinkStyle}>
+              Austin
             </Link>
           </li>
           <li>
