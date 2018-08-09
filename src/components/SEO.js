@@ -179,6 +179,8 @@ class SEO extends Component {
              }
        }
    `}</script>
+
+
       </Helmet>
     )
   }

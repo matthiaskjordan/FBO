@@ -32,28 +32,34 @@ const MenuMobile = styled(SideMenu)`
   }
   li {
     display: block;
-    margin-left: 1em;
-    padding: 0.5rem 0;
+    margin: 1em;
+    padding: .5rem;
   }
   a {
     text-decoration: none;
     color: ${props => props.theme.colors.white};
-    font-weight: 600;
+    font-weight: 400;
     transition: all 0.2s;
   }
   &:hover {
     color: ${props => props.theme.colors.white};
+    box-shadow: -1px 0 0 0 red;
   }
   .bm-item-list a {
     color: ${props => props.theme.colors.white};
-    padding: 1rem 2rem;
     text-decoration: none;
+    padding: 1rem;
+    &:hover {
+      color: ${props => props.theme.colors.white};
+      box-shadow: -1px 0 0 0 red;
+    }
   }
 `
 
 const activeLinkStyle = {
   color: 'white',
-  borderBottom: '2px solid white',
+  boxShadow: '-2px 0 0 0 red',
+  fontWeight: 'bold',
 }
 
 var styles = {
@@ -122,6 +128,26 @@ const Menu = () => {
           <li>
             <Link to="SQL" activeStyle={activeLinkStyle}>
               SQL
+            </Link>
+          </li>
+          <li>
+            <Link to="Austin" activeStyle={activeLinkStyle}>
+              Austin
+            </Link>
+          </li>
+          <li>
+            <Link to="Houston" activeStyle={activeLinkStyle}>
+              Houston
+            </Link>
+          </li>
+          <li>
+            <Link to="Dallas" activeStyle={activeLinkStyle}>
+              Dallas
+            </Link>
+          </li>
+          <li>
+            <Link to="Midland" activeStyle={activeLinkStyle}>
+              Midland
             </Link>
           </li>
         </ul>
