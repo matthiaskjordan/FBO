@@ -58,7 +58,7 @@ const MenuMobile = styled(SideMenu)`
 
 const activeLinkStyle = {
   color: 'white',
-  boxShadow: '-2px 0 0 0 red',
+  boxShadow: '-2px 0 0 0 red, inset 1px 0 0 0 red',
   fontWeight: 'bold',
 }
 
