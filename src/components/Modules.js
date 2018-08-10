@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 
 const List = styled.ul`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 1rem;
   height: 100%;
@@ -12,10 +12,10 @@ const List = styled.ul`
     grid-template-columns: 1fr;
   }
   @media screen and (min-width: 600px) and (max-width: 1024px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   @media screen and (min-width: 1025px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `
 const Card = styled.li`
@@ -38,14 +38,14 @@ const Card = styled.li`
     width: 100%;
   }
   @media screen and (min-width: 1025px) {
-    width: 50%;
+    width: 60%;
   }
 `
 const Title = styled.h2`
   font-size: ${props => (props.small ? '.5em' : '1em')};
   font-weight: 600;
   text-transform: uppercase;
-  margin: 1rem 1rem 0.5rem 1rem;
+  margin: 0;
   text-align: center;
 `
 

@@ -50,6 +50,15 @@ const Index = ({ data }) => {
     padding: 2rem;
     background: ${props => props.theme.colors.blue};
     color: ${props => props.theme.colors.white};
+    h1 {
+      font-size: 2.25rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+    }
+    p {
+      font-size: 1.25rem;
+    }
   `
   const Hero = styled.div`
     grid-area: Hero;
