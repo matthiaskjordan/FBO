@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import SEO from '../components/SEO'
 import Modules from '../components/Modules'
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Index = ({ data }) => {
   const pages = data.allContentfulPage.edges
@@ -133,7 +134,7 @@ const Index = ({ data }) => {
     font-weight: inherit;
   `
   return (
-    <div>
+    <PageTransition>
       <SEO />
       {pages.map(({ node: page }) => (
         <GridContainer key={page.id}>
@@ -164,7 +165,7 @@ const Index = ({ data }) => {
           </TextMeTheApp>
         </GridContainer>
       ))}
-    </div>
+    </PageTransition>
   )
 }
 

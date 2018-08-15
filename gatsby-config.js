@@ -42,6 +42,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-page-transitions',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-transformer-remark`,

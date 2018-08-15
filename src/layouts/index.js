@@ -13,7 +13,7 @@ const Template = ({ children }) => {
       <Helmet>
         <title>{config.siteTitle}</title>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
         <link rel="icon" href={config.siteLogo} />
         <meta name="description" content={config.siteDescription} />
         <meta property="og:title" content={config.siteTitle} />

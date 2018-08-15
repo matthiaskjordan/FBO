@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import SEO from '../components/SEO'
 import Modules from '../components/Modules'
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Index = ({ data }) => {
   const pages = data.allContentfulPage.edges
@@ -50,6 +51,15 @@ const Index = ({ data }) => {
     padding: 2rem;
     background: ${props => props.theme.colors.blue};
     color: ${props => props.theme.colors.white};
+    h1 {
+      font-size: 2.25rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+    }
+    p {
+      font-size: 1.25rem;
+    }
   `
   const Hero = styled.div`
     grid-area: Hero;
@@ -124,7 +134,7 @@ const Index = ({ data }) => {
     font-weight: inherit;
   `
   return (
-    <div>
+    <PageTransition>
       <SEO />
       {pages.map(({ node: page }) => (
         <GridContainer key={page.id}>
@@ -155,7 +165,7 @@ const Index = ({ data }) => {
           </TextMeTheApp>
         </GridContainer>
       ))}
-    </div>
+    </PageTransition>
   )
 }
 
