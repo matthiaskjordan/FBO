@@ -6,7 +6,6 @@ import '../styles/global'
 import theme from '../styles/theme'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
-import favicon from '../images/favicon.ico'
 
 const Template = ({ children }) => {
   return (
@@ -15,7 +14,7 @@ const Template = ({ children }) => {
         <title>{config.siteTitle}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href={favicon} />
+        <link rel="icon" href={config.siteLogo} />
         <meta name="description" content={config.siteDescription} />
         <meta property="og:title" content={config.siteTitle} />
         <meta property="og:url" content={config.siteUrl} />
