@@ -22,6 +22,8 @@ const Template = ({ children }) => {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={config.siteTitle} />
         <link rel="stylesheet" type="text/css" href={config.fonts} />
+        <link rel="apple-touch-icon" href={config.siteIcon} />
+        <link rel="shortcut icon" href={config.siteIcon} type="image/x-icon"/>
       </Helmet>
 
       <ThemeProvider theme={theme}>

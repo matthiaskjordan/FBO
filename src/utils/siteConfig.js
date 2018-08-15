@@ -14,6 +14,7 @@ module.exports = {
   shareImageWidth: 900, // Change to the width of your default share image
   shareImageHeight: 600, // Change to the height of your default share image
   siteLogo: '/logos/logo-512.png', // Logo used for SEO, RSS, and App manifest
+  siteIcon: '/logos/icon-512.png', // Logo used for SEO, RSS, and App manifest
   backgroundColor: '#e9e9e9', // Used for Offline Manifest
   themeColor: '#121212', // Used for Offline Manifest
   copyright: 'Copyright © 2018 Surf Air', // Copyright string for the RSS feed
