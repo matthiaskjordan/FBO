@@ -38,7 +38,7 @@ const Card = styled.li`
     width: 100%;
   }
   @media screen and (min-width: 1025px) {
-    width: 60%;
+    width: 50%;
   }
 `
 const Title = styled.h2`
