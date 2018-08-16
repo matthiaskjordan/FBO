@@ -189,8 +189,8 @@ export const query = graphql`
             }
           }
           content {
-            __typename
             ... on ContentfulPost {
+              __typename
               title
               id
               slug
