@@ -111,47 +111,47 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <Link to="hhr" activeStyle={activeLinkStyle}>
+            <Link to="/hhr" activeStyle={activeLinkStyle}>
               Hawthorne
             </Link>
           </li>
           <li>
-            <Link to="bur" activeStyle={activeLinkStyle}>
+            <Link to="/bur" activeStyle={activeLinkStyle}>
               Burbank
             </Link>
           </li>
           <li>
-            <Link to="sba" activeStyle={activeLinkStyle}>
+            <Link to="/sba" activeStyle={activeLinkStyle}>
               Santa Barbara
             </Link>
           </li>
           <li>
-            <Link to="sql" activeStyle={activeLinkStyle}>
+            <Link to="/sql" activeStyle={activeLinkStyle}>
               San Carlos
             </Link>
           </li>
           <li>
-            <Link to="trk" activeStyle={activeLinkStyle}>
+            <Link to="/trk" activeStyle={activeLinkStyle}>
               Truckee / Lake Tahoe
             </Link>
           </li>
           <li>
-            <Link to="Houston" activeStyle={activeLinkStyle}>
+            <Link to="/Houston" activeStyle={activeLinkStyle}>
               Houston
             </Link>
           </li>
           <li>
-            <Link to="Dallas" activeStyle={activeLinkStyle}>
+            <Link to="/Dallas" activeStyle={activeLinkStyle}>
               Dallas
             </Link>
           </li>
           <li>
-            <Link to="Austin" activeStyle={activeLinkStyle}>
+            <Link to="/Austin" activeStyle={activeLinkStyle}>
               Austin
             </Link>
           </li>
           <li>
-            <Link to="Midland" activeStyle={activeLinkStyle}>
+            <Link to="/Midland" activeStyle={activeLinkStyle}>
               Midland
             </Link>
           </li>
