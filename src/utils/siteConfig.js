@@ -3,7 +3,7 @@ module.exports = {
   siteTitleAlt: 'In-FBO Surf Air Kiosk', // This allows an alternative site title for SEO schema.
   publisher: 'Surf Air', // Organization name used for SEO schema
   siteDescription:
-    'In-FBO Surf Air Kiosk to provide information and collect feedback.',
+    'In FBO Surf Air Kiosk to provide information and collect feedback.',
   siteUrl: 'https://sa-fbo.netlify.com', // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/
   author: 'Matthias Jordan', // Author for RSS author segment and SEO schema
   authorUrl: 'https://surfair.com', // URL used for author and publisher schema, can be a social profile or other personal site
