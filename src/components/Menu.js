@@ -157,7 +157,7 @@ const Menu = () => {
           </li>
         </ul>
       </MenuMobile>
-      <a href="/">
+      <a href="#">
         <img src={withPrefix('./logos/fbo_logo.png')} />
       </a>
     </Nav>

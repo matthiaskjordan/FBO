@@ -78,7 +78,7 @@ module.exports = {
         name: config.siteTitle,
         short_name: config.shortTitle,
         description: config.siteDescription,
-        start_url: '/',
+        start_url: 'sa-fbo.netlify.com',
         background_color: '#ffffff',
         theme_color: '#ffffff',
         display: 'fullscreen',
